@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Schedule | CuePointe</title>
+    <style>
+        :root {
+            --neon-green: #39FF14;
+            --gold: #D4AF37;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: var(--dark-bg);
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 3px solid var(--gold);
+            background: linear-gradient(to bottom, #000, #111);
+        }
+
+        h1 { font-size: 3rem; margin: 0; letter-spacing: 4px; }
+        .live-indicator { color: var(--neon-green); font-size: 1rem; letter-spacing: 2px; }
+
+        /* SCHEDULE CARDS */
+        .schedule-list { margin-top: 40px; }
+
+        .venue-card {
+            background: var(--card-bg);
+            border-left: 5px solid var(--gold);
+            margin-bottom: 20px;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .venue-card:hover {
+            transform: scale(1.02);
+            background: #222;
+        }
+
+        .event-details h2 { margin: 0; color: var(--gold); font-size: 1.5rem; }
+        .event-details p { margin: 5px 0; color: #aaa; }
+
+        .time-box {
+            text-align: right;
+            border-left: 1px solid #333;
+            padding-left: 20px;
+        }
+
+        .date { font-size: 1.2rem; font-weight: bold; color: var(--neon-green); }
+        .prize { font-size: 0.9rem; color: #fff; display: block; margin-top: 5px; }
+
+        .btn-register {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            background: var(--gold);
+            color: #000;
+            text-decoration: none;
+            font-weight: 900;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .back-home {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #444;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <p class="live-indicator">● LIVE TOURNAMENT FEED</p>
+        <h1>EVENT SCHEDULE</h1>
+    </header>
+
+    <div class="container">
+        <div class="schedule-list">
+            
+            <div class="venue-card">
+                <div class="event-details">
+                    <h2>Kabalagala Weekly Knockout</h2>
+                    <p>Venue: The Hub Kabalagala</p>
+                </div>
+                <div class="time-box">
+                    <span class="date">EVERY TUESDAY</span>
+                    <span class="prize">PRIZE: UGX 100,000+</span>
+                </div>
+            </div>
+
+            <div class="venue-card">
+                <div class="event-details">
+                    <h2>Kansanga Pro-Am Series</h2>
+                    <p>Venue: Sky View Lounge</p>
+                </div>
+                <div class="time-box">
+                    <span class="date">EVERY THURSDAY</span>
+                    <span class="prize">PRIZE: UGX 250,000+</span>
+                </div>
+            </div>
+
+            <div class="venue-card" style="border-left-color: var(--neon-green);">
+                <div class="event-details">
+                    <h2>CuePointe Grand Open</h2>
+                    <p>Venue: Kampala Central</p>
+                </div>
+                <div class="time-box">
+                    <span class="date">MAY 15, 2026</span>
+                    <span class="prize">PRIZE: UGX 1,000,000</span>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="register.html" class="btn-register">SECURE YOUR SPOT NOW</a>
+        <a href="index.html" class="back-home">RETURN TO MAIN SITE</a>
+    </div>
+
+</body>
+</html>
