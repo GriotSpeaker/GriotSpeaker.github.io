@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player Registration | CuePointe Action Pool</title>
+    <title>Player Entry | CuePointe</title>
     <style>
         :root {
             --brand-gold: #D4AF37;
@@ -27,21 +27,27 @@
         .form-container {
             background: var(--stadium-gray);
             padding: 40px;
-            border-radius: 10px;
+            border-radius: 12px;
             border: 2px solid var(--brand-gold);
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
             width: 100%;
-            max-width: 500px;
+            max-width: 450px;
             margin: 20px;
+            text-align: center; /* Centers the logo and header */
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
+        /* LOGO STYLING */
+        .form-logo {
+            max-width: 120px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background: #fff; /* White background makes the logo pop */
+            padding: 5px;
+            border: 2px solid var(--brand-gold);
         }
 
         .header h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin: 0;
             color: var(--brand-gold);
             letter-spacing: 2px;
@@ -49,30 +55,32 @@
 
         .header p {
             color: var(--neon-green);
-            font-size: 0.9rem;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
+            margin-bottom: 25px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            text-align: left; /* Keeps inputs easy to read */
+            margin-bottom: 18px;
         }
 
         label {
             display: block;
             margin-bottom: 8px;
-            font-size: 0.9rem;
-            color: #ccc;
+            font-size: 0.8rem;
+            color: #bbb;
         }
 
         input, select {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             background: #000;
             border: 1px solid #333;
             color: white;
-            border-radius: 4px;
+            border-radius: 6px;
             font-size: 1rem;
             box-sizing: border-box;
+            font-family: 'Oswald', sans-serif;
         }
 
         input:focus {
@@ -80,31 +88,40 @@
             outline: none;
         }
 
-        .btn-submit {
+        /* THE STYLISH CONFIRM BUTTON */
+        .btn-confirm {
             width: 100%;
-            padding: 15px;
+            padding: 18px;
             background: var(--brand-gold);
             color: black;
             border: none;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 900;
             cursor: pointer;
-            border-radius: 4px;
-            transition: 0.3s;
-            margin-top: 10px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 0px #9e8229; /* 3D effect */
         }
 
-        .btn-submit:hover {
+        .btn-confirm:hover {
             background: var(--neon-green);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(57, 255, 20, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(57, 255, 20, 0.4);
+            color: #000;
+        }
+
+        .btn-confirm:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0px #2a7a0a;
         }
 
         .back-link {
             display: block;
-            text-align: center;
-            margin-top: 20px;
-            color: #666;
+            margin-top: 25px;
+            color: #555;
             text-decoration: none;
             font-size: 0.8rem;
         }
@@ -115,44 +132,37 @@
 <body>
 
     <div class="form-container">
+        <img src="CuePointe_Logo.jpg" alt="CuePointe Logo" class="form-logo">
+
         <div class="header">
-            <h1>JOIN THE ACTION</h1>
-            <p>Official Player Entry Form</p>
+            <h1>PLAYER ENTRY</h1>
+            <p>Sanctioned Action Pool Series</p>
         </div>
 
-        <form action="#" method="POST">
+        <form>
             <div class="form-group">
-                <label for="name">Full Player Name</label>
-                <input type="text" id="name" name="name" placeholder="E.G. THOMAS OTIENO" required>
+                <label>Full Player Name</label>
+                <input type="text" placeholder="ENTER NAME" required>
             </div>
 
             <div class="form-group">
-                <label for="phone">WhatsApp Number (For Tournament Alerts)</label>
-                <input type="tel" id="phone" name="phone" placeholder="+256..." required>
+                <label>WhatsApp Number</label>
+                <input type="tel" placeholder="+256..." required>
             </div>
 
             <div class="form-group">
-                <label for="venue">Preferred Home Venue</label>
-                <select id="venue" name="venue">
-                    <option value="kabalagala">Kabalagala Hub</option>
-                    <option value="kansanga">Kansanga Hub</option>
-                    <option value="other">Other (Kampala)</option>
+                <label>Preferred Venue</label>
+                <select>
+                    <option>Kabalagala Hub</option>
+                    <option>Kansanga Hub</option>
+                    <option>Tournament Special</option>
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="rank">Current Player Level</label>
-                <select id="rank" name="rank">
-                    <option value="amateur">Amateur / Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="pro">Semi-Pro / Pro</option>
-                </select>
-            </div>
-
-            <button type="submit" class="btn-submit">CONFIRM REGISTRATION</button>
+            <button type="submit" class="btn-confirm">CONFIRM REGISTRATION</button>
         </form>
 
-        <a href="index.html" class="back-link">← RETURN TO HOME</a>
+        <a href="index.html" class="back-link">← EXIT REGISTRATION</a>
     </div>
 
 </body>
